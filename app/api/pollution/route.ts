@@ -6,15 +6,14 @@ export async function GET(req: NextRequest) {
     const apiKey = process.env.OPENWEATHERMAP_API_KEY;
     const lat = 40.41;
     const lon = -3.7;
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    const url = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
     const res = await axios.get(url);
-    
-    console.log("res weather",res.data)
 
+    console.log("res air quality", res.data);
     return NextResponse.json(res.data);
   } catch (error) {
-    console.log("Error fetching forcast data: ", error);
-    return new Response("Error fetching forcast data", { status: 500 });
+    console.log("Error fetching air quality data: ", error);
+    return new Response("Error fetching air quality data", { status: 500 });
   }
 }
