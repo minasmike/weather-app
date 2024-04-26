@@ -22,6 +22,7 @@ const AirPollution = () => {
     ) {
         return (
             <Skeleton className="w-[26rem] h-[12rem]" />
+            
         );
     }
     

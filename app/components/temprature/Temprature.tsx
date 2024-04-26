@@ -18,8 +18,8 @@ const Temprature = () => {
     const { main, timezone, name, weather } = forecast.forecast
 
 
-    console.log(timezone)
-    console.log()
+    // console.log(timezone)
+
     if (!forecast || !weather) {
         console.log(forecast)
         console.log(weather)
@@ -55,8 +55,8 @@ const Temprature = () => {
                 return clearSky;
         }
     };
-    console.log(currentDay)
-console.log(locaTime)
+    // console.log(currentDay)
+// console.log(locaTime)
 
 // time
 
